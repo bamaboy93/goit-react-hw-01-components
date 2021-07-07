@@ -1,0 +1,29 @@
+.Profile {
+  flex-wrap: wrap;
+  display: flex;
+  width: 240px;
+  margin: 10px auto;
+  padding: 5px;
+  border: 5px solid teal;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+.Profile img {
+  width: 200px;
+  margin-left: 15px;
+}
+.UserInfoTitle {
+  margin-right: 5px;
+}
+
+.UserInfoText {
+  font-style: italic;
+  margin-left: 28px;
+}
+
+.UserInfo {
+  font-style: bold;
+  margin-left: 15px;
+  font-weight: 700;
+}

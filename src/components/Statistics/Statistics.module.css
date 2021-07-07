@@ -1,0 +1,29 @@
+.Statistics {
+  margin-bottom: 60px;
+}
+
+.StatisticsList {
+  display: flex;
+  justify-content: center;
+}
+.StatisticsTitle {
+  font-style: italic;
+  font-weight: 700;
+  color: teal;
+}
+
+.StatisticsItem {
+  border-radius: 8px;
+  font-weight: 700;
+  padding: 15px;
+  background-color: tomato;
+  width: 160px;
+}
+.StatisticsItem:hover,
+.StatisticsItem:focus {
+  background-color: yellow;
+}
+
+.StatisticsItem + .StatisticsItem {
+  margin-left: 10px;
+}
