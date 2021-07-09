@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from "./Statistics.module.css"
 
-const Statistics = ({stats}) => (
+const Statistics = ({stats, title}) => (
   <section className={styles.Statistics}>
-  <h2 className={styles.StatisticsTitle}>Upload stats</h2>
+    <h2 className={styles.StatisticsTitle}>{ title }</h2>
 
   <ul className={styles.StatisticsList}>
     {stats.map(stat =>

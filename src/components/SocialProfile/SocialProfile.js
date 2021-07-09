@@ -4,40 +4,39 @@ import defaultImage from './image.jpg'
 
 import styles from './SocialProfile.module.css'
 
-const SocialProfile = ({ avatar, name, tag, location, stats}) => (
+const Profile = ({ avatar, name, tag, location, stats}) => (
     <div className={styles.Profile}>
-  <div>
-    <img
-      src={avatar}
-        alt={name}
-        width="240"
-      
-    />
+      <div>
+        <img
+          src={avatar}
+          alt={name}
+          width="240"
+        />
         <p className={styles.UserInfo} >{ name }</p>
         <p className={styles.UserInfo}>{  tag }</p>
         <p className={styles.UserInfo}>{ location }</p>
-  </div>
+      </div>
 
-  <ul className={styles.UserInfoList}>
-    <li className={styles.UserInfoText}>
-      <span className={styles.UserInfoTitle}>Followers</span>
+      <ul className={styles.UserInfoList}>
+        <li className={styles.UserInfoText}>
+          <span className={styles.UserInfoTitle}>Followers</span>
           <span >{stats.followers}</span>
-    </li>
-    <li className={styles.UserInfoText}>
-      <span className={styles.UserInfoTitle}>Views</span>
+        </li>
+        <li className={styles.UserInfoText}>
+          <span className={styles.UserInfoTitle}>Views</span>
           <span >{ stats.views }</span>
-    </li>
-    <li className={styles.UserInfoText}>
-      <span className={styles.UserInfoTitle}>Likes</span>
+        </li>
+        <li className={styles.UserInfoText}>
+          <span className={styles.UserInfoTitle}>Likes</span>
           <span >{ stats.likes }</span>
-    </li>
-  </ul>
-</div>
+        </li>
+      </ul>
+    </div>
 )
-SocialProfile.defaultProps = {
+Profile.defaultProps = {
   avatar: defaultImage,
 }
-SocialProfile.propTypes = {
+Profile.propTypes = {
   avatar: PropTypes.string,
   alt: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
@@ -48,4 +47,4 @@ SocialProfile.propTypes = {
     likes: PropTypes.number.isRequired
   }).isRequired,
 }
-export default SocialProfile;
+export default Profile;

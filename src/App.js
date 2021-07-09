@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SocialProfile from './components/SocialProfile/SocialProfile';
+import Profile from './components/SocialProfile/SocialProfile';
 import Statistics from './components/Statistics/Statistics';
 import FriendList from './components/FriendList/FriendList';
 import TransactionHistory from './components/TransactionHistory/TransactionHistory';
@@ -14,7 +14,7 @@ import transactions from './components/transactions.json';
 
 const App = () => (
     <Container>
-        <SocialProfile
+        <Profile
         avatar={avatar}
         alt={name}
         name={name}
@@ -22,7 +22,9 @@ const App = () => (
         location={location}
         stats={stats} />
     
-        <Statistics stats={statisticalData} />
+        <Statistics
+            title="Upload stats"
+            stats={statisticalData} />
         <FriendList friends={friends} />
         <TransactionHistory transactions={transactions} />
     </Container>
